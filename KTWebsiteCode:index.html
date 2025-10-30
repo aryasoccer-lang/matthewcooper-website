@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matthew Cooper — Crypto Fund & Ventures</title>
+  <meta name="description" content="Matthew Cooper is a cryptocurrency trader and investor. He manages a fund and launches crypto projects." />
+  <meta name="theme-color" content="#0b2447" />
+
+  <!-- Favicon: inline gold 'MC' on navy (no external file) -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f2d58a'/%3E%3Cstop offset='1' stop-color='%23c5a25f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='12' fill='%230b2447'/%3E%3Cpath d='M18 44V20h6l6.2 11.5L36.5 20H42v24h-5V28.9l-6 10.7h-2l-6-10.7V44z' fill='url(%23g)'/%3E%3C/svg%3E" />
+
+  <style>
+    :root{
+      --bg:#f8fafc;           /* clean white */
+      --fg:#0f172a;           /* deep slate/navy text */
+      --navy:#0b2447;         /* luxury navy */
+      --muted:#374151;        /* slate */
+      --gold1:#f2d58a;        /* light gold */
+      --gold2:#c5a25f;        /* rich gold */
+      --card:#ffffff;         /* surfaces */
+      --border:rgba(2,6,23,.08);
+      --radius:16px;
+      --shadow:0 10px 30px rgba(2,6,23,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--fg);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial;
+      line-height:1.65; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+      overflow-x:hidden;
+    }
+
+    /* Header / Hero */
+    header{
+      padding:56px 20px 32px;
+      border-bottom:1px solid var(--border);
+      background:
+        radial-gradient(1200px 600px at 85% -10%, rgba(11,36,71,.06), transparent 60%);
+      text-align:center;
+      animation:fadeUp .8s ease both;
+    }
+    .mark{
+      width:64px; height:64px; border-radius:14px; margin:0 auto 14px; overflow:hidden; box-shadow:var(--shadow);
+    }
+    .mark svg{width:100%; height:100%; display:block}
+    h1{
+      margin:0;
+      font-size:clamp(28px,3.2vw,40px);
+      background:linear-gradient(90deg,var(--navy),var(--gold2));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    .topline{
+      margin:14px auto 0;
+      font-size:1.05rem;
+      color:var(--muted);
+      max-width:900px;
+    }
+
+    /* Layout */
+    .container{max-width:980px; margin:0 auto; padding:28px 20px 80px}
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+      padding:28px; box-shadow:var(--shadow); margin:28px 0;
+      opacity:0; transform:translateY(20px); animation:fadeUp .9s ease forwards;
+    }
+    h2{
+      margin:0 0 8px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--navy);
+    }
+    p{margin:0 0 16px; color:var(--muted)}
+
+    /* Grid */
+    .grid{display:grid; gap:16px}
+    @media(min-width:880px){ .grid.cols-2{grid-template-columns:1fr 1fr} .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
+
+    /* Pills, buttons, inputs */
+    .pill{
+      display:inline-block; padding:6px 10px; border-radius:999px;
+      border:1px solid var(--border); background:#eef2f7; color:var(--navy); font-size:12px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 16px; border-radius:12px; text-decoration:none; cursor:pointer;
+      background:linear-gradient(90deg,var(--gold1),var(--gold2)); color:#0b2447; font-weight:700;
+      border:1px solid rgba(197,162,95,.35); box-shadow:0 6px 16px rgba(197,162,95,.2);
+      transition:transform .15s ease, box-shadow .2s ease;
+    }
+    .btn:hover{ transform:translateY(-1px); box-shadow:0 10px 20px rgba(197,162,95,.25) }
+    .input{
+      width:100%; padding:12px; border-radius:12px; border:1px solid var(--border);
+      background:#f8fafc; color:var(--fg); font-size:15px;
+    }
+    textarea.input{min-height:120px; resize:vertical}
+
+    /* Footer */
+    footer{
+      text-align:center; color:var(--muted); font-size:14px; padding:24px 0; border-top:1px solid var(--border);
+      opacity:0; animation:fadeUp 1.2s ease forwards;
+    }
+
+    /* Animations */
+    @keyframes fadeUp{ from{opacity:0; transform:translateY(40px)} to{opacity:1; transform:translateY(0)} }
+
+    /* Focus & selection */
+    :focus-visible{ outline:2px solid var(--gold2); outline-offset:3px }
+    ::selection{ background:#e2e8f0; color:#0b2447 }
+  </style>
+</head>
+<body>
+  <!-- HERO -->
+  <header>
+    <div class="mark" aria-hidden="true">
+      <!-- Inline gold 'MC' logo -->
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MC logo">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f2d58a"/><stop offset="1" stop-color="#c5a25f"/></linearGradient></defs>
+        <rect width="64" height="64" rx="12" fill="#0b2447"/>
+        <path d="M18 44V20h6l6.2 11.5L36.5 20H42v24h-5V28.9l-6 10.7h-2l-6-10.7V44z" fill="url(#g)"/>
+      </svg>
+    </div>
+    <h1>Matthew Cooper</h1>
+    <!-- Keep EXACT top line sentence, centered -->
+    <p class="topline">Matthew Cooper is a cryto currency trader and investor. He manages a fund and launches crypto projects </p>
+  </header>
+
+  <main class="container">
+    <!-- ABOUT -->
+    <section class="card">
+      <h2>About</h2>
+      <p>Matthew operates a boutique crypto fund with a mandate across liquid majors, selective alt exposure, and DeFi yield. On the venture side, he supports founders building core infrastructure — execution, custody, data pipelines, and cross-chain connectivity — where real usage and risk controls matter more than hype.</p>
+    </section>
+
+    <!-- PROJECTS (filled with realistic blurbs) -->
+    <section class="card">
+      <h2>Projects</h2>
+      <div class="grid cols-3">
+        <article class="card" style="margin:0; padding:18px;">
+          <span class="pill">DEX</span>
+          <h3 style="margin:.5rem 0 .3rem; color:var(--navy)">Aurum Labs</h3>
+          <p style="color:var(--muted)">Cross-chain liquidity routing with RFQ for size and slippage controls. Bridges CEX/DEX workflows with audit-ready trails.</p>
+        </article>
+        <article class="card" style="margin:0; padding:18px;">
+          <span class="pill">Derivatives</span>
+          <h3 style="margin:.5rem 0 .3rem; color:var(--navy)">Lattice Protocol</h3>
+          <p style="color:var(--muted)">On-chain perps with oracle-aware safeguards and fair funding dynamics designed for throughput and transparency.</p>
+        </article>
+        <article class="card" style="margin:0; padding:18px;">
+          <span class="pill">Custody</span>
+          <h3 style="margin:.5rem 0 .3rem; color:var(--navy)">HavenVault</h3>
+          <p style="color:var(--muted)">Multi-sig institutional custody with programmable policies, staking, and incident playbooks for operations.</p>
+        </article>
+        <article class="card" style="margin:0; padding:18px;">
+          <span class="pill">Yield</span>
+          <h3 style="margin:.5rem 0 .3rem; color:var(--navy)">Solaris Yield</h3>
+          <p style="color:var(--muted)">Curated DeFi strategies blending RWA-backed yield and stablecoin liquidity provision for stable returns.</p>
+        </article>
+        <article class="card" style="margin:0; padding:18px;">
+          <span class="pill">Oracle</span>
+          <h3 style="margin:.5rem 0 .3rem; color:var(--navy)">Sentinel Feeds</h3>
+          <p style="color:var(--muted)">Low-latency, medianized price feeds with circuit breakers to withstand volatile prints and exchange outages.</p>
+        </article>
+        <article class="card" style="margin:0; padding:18px;">
+          <span class="pill">Infra</span>
+          <h3 style="margin:.5rem 0 .3rem; color:var(--navy)">Validator Fleet</h3>
+          <p style="color:var(--muted)">Operational runbooks for staking across chains: alerting, slashing prevention, MEV considerations, and delegations.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ON-PAGE AI (writes blurbs locally, no dead links) -->
+    <section class="card" id="ai">
+      <h2>AI Insights</h2>
+      <p>Ask a quick crypto question — this page generates a short note entirely in your browser (no data leaves the page).</p>
+      <div class="grid cols-2" style="gap:12px; margin:10px 0 8px;">
+        <input id="q" class="input" placeholder="e.g., SOL outlook next month?" aria-label="Your question">
+        <button class="btn" id="ask" type="button">Generate</button>
+      </div>
+      <div class="card" style="margin:10px 0 0; padding:16px;">
+        <pre id="out" style="margin:0; white-space:pre-wrap; color:var(--muted)">// Your AI summary will appear here...</pre>
+      </div>
+      <p style="margin-top:10px; font-size:12px; color:#6b7280">Demo purpose only. Not financial advice.</p>
+    </section>
+
+    <!-- CONTACT (real email button + working mailto form + phone) -->
+    <section class="card" id="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a class="btn" href="mailto:coopmatt26@gmail.com" style="margin-left:8px;">Email Matthew</a></p>
+      <p style="margin-top:8px;"><strong>Phone:</strong> <span style="color:var(--muted)">+1 (551) 223-8700</span></p>
+
+      <!-- Real form: opens user's email client to send to your address -->
+      <form action="mailto:coopmatt26@gmail.com" method="post" enctype="text/plain" style="margin-top:14px;">
+        <div class="grid cols-2" style="gap:12px;">
+          <input class="input" name="Name" placeholder="Your name" required>
+          <input class="input" type="email" name="Email" placeholder="Your email" required>
+        </div>
+        <textarea class="input" name="Message" placeholder="Text here" required style="margin-top:12px;"></textarea>
+        <div style="margin-top:12px;">
+          <button class="btn" type="submit">Send Message</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Matthew Cooper — All Rights Reserved
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Simple local "AI": deterministic templates (no network calls)
+    const TEMPLATES = [
+      k => `**Regime check: ${k.toUpperCase()}**
+• Trend: Higher-timeframe structure intact; expect range until key levels break.
+• Flows: Watch stablecoin growth & dominance to gauge risk appetite.
+• Plan: Let reclaimed levels confirm; respect invalidation.`,
+      k => `**Catalyst map (${k})**
+Near-term: macro prints, ETF flows, unlocks.
+Risk: Thin liquidity pockets during Asia/NY handoff.
+Tactic: Trade smaller around events; size up only on confirmation.`,
+      k => `**DeFi lens (${k})**
+TVL & real fees > headlines. Prefer protocols with actual users over pure emissions.
+Mind borrow rates and liquidation bands.`,
+      k => `**Positioning (${k})**
+Use staged entries; hedge with perps when skew stretches.
+If spot leads, momentum can persist; if perp leads, fade extremes.`
+    ];
+    const HINTS = [
+      { re:/\bbtc|bitcoin\b/i, key:'BTC' },
+      { re:/\beth|ethereum\b/i, key:'ETH' },
+      { re:/\bsol(ana)?\b/i, key:'SOL' },
+      { re:/\bbnb|avalanche|avax|near|aptos|sui\b/i, key:'Alts' },
+      { re:/\bmacro|cpi|rates|etf|dxy\b/i, key:'Macro' }
+    ];
+    function pick(a){ return a[Math.floor(Math.random()*a.length)] }
+    function generate(q){
+      const key = (HINTS.find(h => h.re.test(q))?.key) || 'Market';
+      const a = pick(TEMPLATES)(key);
+      const b = pick(TEMPLATES)(key);
+      return `${a}\n\n${b}\n\n— Generated locally • Not financial advice`;
+    }
+    const q = document.getElementById('q');
+    const out = document.getElementById('out');
+    document.getElementById('ask').addEventListener('click', ()=>{
+      const text = generate((q.value||'').trim());
+      // Typewriter effect
+      out.textContent = '';
+      let i = 0; const speed = 10;
+      (function tick(){ if(i < text.length){ out.textContent += text[i++]; setTimeout(tick, speed);} })();
+    });
+  </script>
+</body>
+</html>
